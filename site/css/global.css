@@ -1,0 +1,236 @@
+/*
+  File Name  global.css
+  Project    liquor log
+  Version    0.0.1
+  Author     Peter Lindstrom
+  Purpose    Global styles utilized throughout the site.
+  Copyright  2024, Peter Lindstrom
+  Link       https://github.com/plindstrom/llog
+*/
+
+
+
+/* Define style variables -------------------------------------------------- */
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --grey-black: rgb(18,18,18);
+  --grey-dark: rgb(31,31,31);
+  --grey-medium-dark: rgb(40,44,52);
+  --grey-medium: rgb(41,48,61);
+  --grey-medium-light: rgb(71,78,91);
+  --grey-light: rgb(171,178,191);
+  --grey-white: rgb(209,209,209);
+  --red-medium: rgb(224,108,117);
+  --green-medium: rgb(152,195,121);
+  --orange-medium: rgb(209,154,102);
+  --blue-medium: rgb(97,175,239);
+  --purple-medium: rgb(198,120,221);
+  --cyan-medium: rgb(86,182,194);
+}
+
+
+/* Set default formatting -------------------------------------------------- */
+html,body,header,footer,nav,main,section,article,aside,h1,h2,h3,h4,h5,h6,ol,ul,img,p{
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html{
+  font-size: 100%;
+}
+
+body{
+  background-color: var(--grey-medium-dark);
+  font-family: 'Roboto','Inter', monospace;
+  color: var(--grey-light);
+}
+
+h1{
+  margin: 0 0 1rem 0;
+  font-size: calc(1.8rem + 0.5vw);
+  color: var(--orange-medium);
+}
+
+h2{
+  margin: 4rem 0 0.5rem 0;
+  font-size: calc(1.4rem + 0.5vw);
+  color: var(--green-medium);
+}
+
+h2:first-child{
+  margin: 0 0 0.5rem 0;
+}
+
+h3{
+  margin: 3rem 1rem 0.5rem 1rem;
+  font-size: calc(1.2rem + 0.3vw);
+  color: var(--cyan-medium);
+}
+
+h4{
+  margin: 2rem 1rem 0.5rem 1rem;
+  font-size: calc(1.2rem + 0.3vw);
+  text-decoration: underline;
+  color: var(--grey-white);
+}
+
+h5{
+  margin: 2rem 1rem 0.5rem 1rem;
+  font-size: calc(1.1rem + 0.3vw);
+  color: var(--grey-light);
+}
+
+h6{
+  margin: 2rem 1rem 0.5rem 1rem;
+  font-size: calc(1rem + 0.3vw);
+  font-weight: normal;
+  font-style: italic;
+  color: var(--grey-light);
+}
+
+p{
+  margin: 0 1rem 2rem 1rem;
+  font-size: calc(1rem + 0.3vw);
+}
+
+p:last-child{
+  margin: 0 1rem;
+}
+
+ul,ol{
+  margin: 0 1rem 2rem 2rem;
+  font-size: calc(1rem + 0.3vw);
+  list-style-position: inside;
+  list-style-type: square;
+}
+
+table{
+  margin: 0 1rem 2rem 1rem;
+  border: 0.2rem solid var(--grey-medium-light);
+  border-collapse: collapse;
+  font-size: calc(1rem + 0.3vw);
+}
+
+th,td{
+  padding: 0.5rem;
+  border: 0.1rem solid var(--grey-medium-light);
+}
+
+th{
+  border-bottom: 0.2rem solid var(--grey-medium-light);
+  background-color: var(--grey-dark);
+}
+
+tr:nth-child(odd){
+  background-color: var(--grey-medium);
+}
+
+a{
+  color: var(--blue-medium);
+}
+
+a:hover{
+  color: var(--red-medium);
+  text-decoration: underline;
+}
+
+br{
+  clear: both;
+}
+
+
+/* Page header ------------------------------------------------------------- */
+header{
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--grey-dark);
+  border-bottom: 0.1rem solid var(--grey-black);
+  text-align: center;
+  /*box-shadow: 0 0.1rem 0.25rem rgb(20,24,32);*/
+}
+
+header div.header-title{
+  display: block;
+  float: left;
+  font-size: calc(1.8rem + 0.5vw);
+  font-weight: normal;
+}
+
+header div.header-title a{
+  text-decoration: none;
+  color: var(--purple-medium);
+}
+
+
+/* Page navigation --------------------------------------------------------- */
+nav{
+  display: block;
+  float: left;
+}
+
+nav ul li{
+  display: inline-block;
+  float: left;
+  list-style-type: none;
+}
+
+nav ul li a{
+  color: var(--grey-white);
+  text-decoration: none;
+}
+
+
+/* Page content ------------------------------------------------------------ */
+main{
+  padding: 2rem;
+  background-color: var(--grey-medium-dark);
+}
+
+
+/* Page footer ------------------------------------------------------------- */
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--grey-dark);
+  border-top: 0.1rem solid var(--grey-black);
+  font-size: calc(0.6rem + 0.3vw);
+}
+
+footer p.footer-updated{
+  float: left;
+  margin: 0;
+  font-size: calc(0.6rem + 0.3vw);
+}
+
+footer p.footer-license{
+  float: right;
+  margin: 0;
+  font-size: calc(0.6rem + 0.3vw);
+}
+
+
+/* Conditional content formatting ------------------------------------------ */
+@media only screen and (max-width: 1023px){
+  main{
+    border-left: none;
+    border-right: none;
+  }
+
+  footer p.footer-updated, footer p.footer-license{
+    float: none;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  #page-wrapper{
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
