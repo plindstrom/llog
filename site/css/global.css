@@ -148,14 +148,10 @@ header{
   width: 100%;
   padding: 1rem;
   background-color: var(--grey-dark);
-  border-bottom: 0.1rem solid var(--grey-black);
   text-align: center;
-  /*box-shadow: 0 0.1rem 0.25rem rgb(20,24,32);*/
 }
 
 header div.header-title{
-  display: block;
-  float: left;
   font-size: calc(1.8rem + 0.5vw);
   font-weight: normal;
 }
@@ -168,17 +164,20 @@ header div.header-title a{
 
 /* Page navigation --------------------------------------------------------- */
 nav{
-  display: block;
-  float: left;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--grey-black);
+  border-top: 0.25rem solid var(--grey-black);
 }
 
 nav ul li{
-  display: inline-block;
-  float: left;
+  display: inline;
   list-style-type: none;
 }
 
 nav ul li a{
+  display: block;
+  float: left;
   color: var(--grey-white);
   text-decoration: none;
 }
