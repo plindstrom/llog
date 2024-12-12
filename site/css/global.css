@@ -51,7 +51,7 @@ body{
 }
 
 h1{
-  margin: 0 0 1rem 0;
+  margin: 1rem 0;
   font-size: calc(1.8rem + 0.5vw);
   color: #873e23;
 }
@@ -216,7 +216,7 @@ main{
 main div.wrapper{
   width: 80%;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
 /*  background-color: #EDF2F7;
   border-left: 1px solid rgb(0, 22, 40);
   border-right: 1px solid rgb(0, 22, 40);*/
