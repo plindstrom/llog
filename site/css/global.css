@@ -226,6 +226,44 @@ main div.wrapper{
   margin: 2.5rem 0 0 0;
 }
 
+.flavor-profile{
+  margin: 0;
+  list-style-type: none;
+}
+
+.flavor-profile li{
+  display: inline;
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: calc(0.9rem + 0.3vw);
+}
+
+.flavor-profile li.flavor-woody{
+  background-color: brown;
+  color: #fff;
+}
+
+.flavor-profile li.flavor-fruity{
+  background-color: green;
+  color: #fff;
+}
+
+.flavor-profile li.flavor-spicy{
+  background-color: darkred;
+  color: #fff;
+}
+
+.flavor-profile a.flavor-remove{
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0 0 0rem 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: calc(0.7rem + 0.2vw);
+}
+
 /* Page footer ------------------------------------------------------------- */
 footer{
   position: fixed;

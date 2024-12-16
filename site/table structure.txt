@@ -1,0 +1,48 @@
+table structure
+
+# liquor_global
+  liquor_global_id
+  liquor_global_name
+  liquor_global_brand
+  liquor_global_type
+  liquor_global_region
+  liquor_global_abv
+  liquor_global_price
+
+# liquor_personal
+  liquor_personal_id
+  liquor_personal_liquor_global_id
+  liquor_personal_user_id
+  liquor_personal_name
+  liquor_personal_brand
+  liquor_personal_type
+  liquor_personal_region
+  liquor_personal_abv
+  liquor_personal_price
+  liquor_personal_first_tasted
+  liquor_personal_last_tasted
+  liquor_personal_rating
+  liquor_personal_tasting
+
+# llog
+  llog_id
+  llog_liquor_personal_id
+  llog_user_id
+  llog_datetime
+  llog_location
+  llog_public
+
+# flavor
+  flavor_id
+  flavor_name
+
+# flavor_to_liquor
+  flavor_to_liquor_id
+  flavor_to_liquor_flavor_id
+  flavor_to_liquor_liquor_personal_id
+
+# user
+  user_id
+  user_name
+  user_pass
+  user_display_name
