@@ -11,23 +11,20 @@
 
 
 /* Define style variables -------------------------------------------------- */
-/*@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-  --grey-black: rgb(18,18,18);
-  --grey-dark: rgb(31,31,31);
-  --grey-medium-dark: rgb(40,44,52);
-  --grey-medium: rgb(41,48,61);
-  --grey-medium-light: rgb(71,78,91);
-  --grey-light: rgb(171,178,191);
-  --grey-white: rgb(209,209,209);
-  --red-medium: rgb(224,108,117);
-  --green-medium: rgb(152,195,121);
-  --orange-medium: rgb(209,154,102);
-  --blue-medium: rgb(97,175,239);
-  --purple-medium: rgb(198,120,221);
-  --cyan-medium: rgb(86,182,194);
+  --background-grey: rgb(237,242,247);
+  --background-dark-blue: rgb(0,9,20);
+  --background-blue: rgb(8,29,47);
+  --text-white: rgb(231,238,247);
+  --text-black: rgb(33,19,13);
+  --text-red: rgb(135,62,35);
+  --text-dark-blue: rgb(8,50,84);
+  --text-blue: rgb(21,76,121);
+  --text-dark-orange: rgb(135,62,35);
+  --text-orange: rgb(226,135,67);
+  --text-light-orange: rgb(235,155,96);
 }
 
 
@@ -44,50 +41,41 @@ html{
 }
 
 body{
-  background-color: #EDF2F7;
+  background-color: var(--background-grey);
   font-family: 'Work Sans', sans-serif;
-  color: #21130d;
-  /* #E7EEF7 */
+  color: var(--text-black);
 }
 
 h1{
   margin: 1rem 0;
   font-size: calc(1.8rem + 0.5vw);
-  color: #873e23;
+  color: var(--text-dark-orange);
 }
 
 h2{
   margin: 4rem 0 0.5rem 0;
   font-size: calc(1.4rem + 0.5vw);
-  color: #154c79;
-}
-
-h2:first-child{
-  margin: 0 0 0.5rem 0;
+  color: var(--text-blue);
 }
 
 h3{
   margin: 3rem 0 0.5rem 0;
   font-size: calc(1.2rem + 0.3vw);
-  color: #e28743;
+  color: var(--text-orange);
   text-transform: uppercase;
-}
-
-h3:first-child{
-  margin: 0 0 0.5rem 0;
 }
 
 h4{
   margin: 2rem 0 0.5rem 0;
   font-size: calc(1.2rem + 0.3vw);
   text-decoration: underline;
-  color: var(--grey-white);
+  color: #ff0000;
 }
 
 h5{
   margin: 2rem 0 0.5rem 0;
   font-size: calc(1.1rem + 0.3vw);
-  color: var(--grey-light);
+  color: #ff0000;
 }
 
 h6{
@@ -95,7 +83,11 @@ h6{
   font-size: calc(1rem + 0.3vw);
   font-weight: normal;
   font-style: italic;
-  color: var(--grey-light);
+  color: #ff0000;
+}
+
+h2:first-child,h3:first-child{
+  margin: 0 0 0.5rem 0;
 }
 
 p{
@@ -110,37 +102,19 @@ p:last-child{
 ul,ol{
   margin: 0 1rem 2rem 2rem;
   font-size: calc(1rem + 0.3vw);
+}
+
+ul{
   list-style-position: inside;
   list-style-type: square;
 }
 
-table{
-  margin: 0 1rem 2rem 1rem;
-  border: 0.2rem solid var(--grey-medium-light);
-  border-collapse: collapse;
-  font-size: calc(1rem + 0.3vw);
-}
-
-th,td{
-  padding: 0.5rem;
-  border: 0.1rem solid var(--grey-medium-light);
-}
-
-th{
-  border-bottom: 0.2rem solid var(--grey-medium-light);
-  background-color: var(--grey-dark);
-}
-
-tr:nth-child(odd){
-  background-color: var(--grey-medium);
-}
-
 a{
-  color: var(--blue-medium);
+  color: var(--text-dark-blue);
 }
 
 a:hover{
-  color: var(--red-medium);
+  color: var(--text-dark-orange);
   text-decoration: underline;
 }
 
@@ -152,47 +126,39 @@ br{
 /* Page header ------------------------------------------------------------- */
 header{
   width: 100%;
-  background-color: #081D2F;
-  /* 081D2F */
+  background-color: var(--background-blue);
 }
 
 header div.wrapper{
   width: 80%;
   margin: 0 auto;
   padding: 1rem;
-/*  background-color: #0B2941;
-  border-left: 1px solid #0F3554;
-  border-right: 1px solid #0F3554;*/
 }
 
 header div.header-title{
   font-size: calc(1.8rem + 0.5vw);
   font-weight: bold;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   text-align: center;
-  color: #E7EEF7;
+  color: var(--text-white);
   text-transform: uppercase;
 }
 
 header div.header-title a{
-  text-decoration: none;
-  color: var(--purple-medium);
+  color: var(--text-white);
 }
 
 
 /* Page navigation --------------------------------------------------------- */
 nav{
   width: 100%;
-  background-color: rgb(0, 9, 20);
+  background-color: var(--background-dark-blue);
 }
 
 nav div.wrapper{
   width: 80%;
   margin: 0 auto;
   padding: 1rem;
-/*  background-color: rgb(0, 14, 28);
-  border-left: 1px solid rgb(0, 22, 40);
-  border-right: 1px solid rgb(0, 22, 40);*/
 }
 
 nav ul li{
@@ -203,23 +169,19 @@ nav ul li{
 nav ul li a{
   display: block;
   float: left;
-  color: var(--grey-white);
+  color: var(--text-white);
   text-decoration: none;
 }
 
 
 /* Page content ------------------------------------------------------------ */
 main{
-  /*background-color: #718090;*/
 }
 
 main div.wrapper{
   width: 80%;
   margin: 0 auto;
   padding: 1rem 0;
-/*  background-color: #EDF2F7;
-  border-left: 1px solid rgb(0, 22, 40);
-  border-right: 1px solid rgb(0, 22, 40);*/
 }
 
 .lnotes{
@@ -264,27 +226,19 @@ main div.wrapper{
   font-size: calc(0.7rem + 0.2vw);
 }
 
+
 /* Page footer ------------------------------------------------------------- */
 footer{
-  position: fixed;
-  bottom: 0;
   width: 100%;
   padding: 1rem;
-  background-color: var(--grey-dark);
-  border-top: 0.1rem solid var(--grey-black);
+  background-color: rgb(0, 9, 20);
   font-size: calc(0.6rem + 0.3vw);
 }
 
-footer p.footer-updated{
-  float: left;
-  margin: 0;
-  font-size: calc(0.6rem + 0.3vw);
-}
-
-footer p.footer-license{
-  float: right;
-  margin: 0;
-  font-size: calc(0.6rem + 0.3vw);
+footer div.wrapper{
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
 
